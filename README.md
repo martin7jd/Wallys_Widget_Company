@@ -13,4 +13,7 @@ Then manually create a database called "widgets" and import the table and column
 
 You are now ready to start using Wally's Widget Stock Controller and Quantity Picker...
 
+index_main.php is the start and landing page...
+
+
 Enjoy
