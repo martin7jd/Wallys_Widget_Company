@@ -80,7 +80,7 @@
 						
 			echo '<br/><br/><br/>';
 			
-			echo '<table border="1">';
+			echo '<table border="0">';
 			
 				echo '<th colspan="2">Order Fulfilment</th>';
 				
