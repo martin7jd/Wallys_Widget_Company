@@ -85,8 +85,13 @@
 			}	else	{
 		
 				$.post('php/index_pack_size_control_add.php', {pack_qty:pack_qty}, function(result, status){				
-					if(status == 'success'){
-						$("#content_2").html(result);
+					if(status == 'success'){				
+				
+						$.get('php/index_pack_size_control.php', {}, function(result, status){				
+							if(status == 'success'){
+								$("#content_2").html(result);
+							}
+						});					
 					}
 				});			
 			}
@@ -99,7 +104,12 @@
 	
 			$.post('php/index_pack_size_control_delete.php', {pack_size:pack_size}, function(result, status){				
 				if(status == 'success'){
-					$("#content_2").html(result);
+				
+					$.get('php/index_pack_size_control.php', {}, function(result, status){				
+							if(status == 'success'){
+								$("#content_2").html(result);
+							}
+					});
 				}
 			});					
 		});

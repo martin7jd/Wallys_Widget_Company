@@ -11,9 +11,7 @@
 
     #	Delete the entry in the database
         mysqli_query($link, 'DELETE FROM widget_packs WHERE widget_pack_size = "' . $numToDelete . '"');         
-    	
-    	echo $numToDelete . ' has been deleted <div id="tick">&#10003;</div>';
-    	
+    	    	
     	mysqli_close($link);
 
 ?>
