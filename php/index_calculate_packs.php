@@ -10,10 +10,10 @@
      <table>   
         <tr>
         	<!-- Field to enter a number-->
-        	<td><input type="text" id="qty_required" placeholder="Quatity Required..."/></td>
+        	<td><input type="text" id="qty_required" placeholder="Quantity Required..."/></td>
 		
         	<!-- Submit button-->		
-        	<td><input type="submit" value='Calculate Now!' autocomplete="off" onclick="make_calculation()" /></td>
+        	<td><input type="submit" class="submit" value='Calculate Now!' autocomplete="off" onclick="make_calculation()" /></td>
         </tr>
 
     </table>
@@ -21,7 +21,7 @@
 
 	<div id="calc_result">
 		<!-- Debug page information-->
-		<div id="debug_info">Debug Info: index_calculate_packs.php</div>	
+		<div id="debug_info">Debug Info: php/index_calculate_packs.php</div>	
 	
 	</div>
 

@@ -1,7 +1,7 @@
 <?php
 
   	#	For database connection
-  		require_once('./common/con_localhost.php');  
+  		require_once('../common/con_localhost.php');  
 
 	#	Link to database				
 		$link = local_db_connect();
@@ -21,10 +21,14 @@
             
     	$getValue = mysqli_query($link,$getValues) or die(mysqli_error());    
         
-    	$value = mysqli_fetch_array($getValue);               
-
+    	while($value = mysqli_fetch_array($getValue)){
+    	
+     		$fullList[] = $value['widget_pack_size'];            
+   	    	
+    	}   
+	
 	#	Check if it's in the array
-		if (!in_array($pack_qty, $value)) {
+		if (!in_array($pack_qty, $fullList)) {
     		$insertNumber = 'INSERT INTO widgets.widget_packs(widget_pack_size)VALUES("' . $pack_qty . '")';	
         
         	$commit_insertNumber = mysqli_query($link,$insertNumber);
@@ -34,12 +38,14 @@
         	}
         		
 			echo '<h3>Congratulations</h3>';
-			echo 'A pack with ' . $pack_qty . ' widgets has been added';
+			echo 'A pack size of ' . $pack_qty . ' widgets has been added';
 		
 		
 		}else{
 		
-    		echo "This number is already in the database";		
+			echo '<h3>Warning</h3>';
+		
+    		echo "This pack size is already in the database";		
 		
 		}
 
@@ -60,4 +66,4 @@
 ?>
 
 	<!-- Debug page information-->
-	<div id="debug_info">Debug info: index_pack_size_control_add.php</div>
+	<div id="debug_info">Debug info: php/index_pack_size_control_add.php</div>

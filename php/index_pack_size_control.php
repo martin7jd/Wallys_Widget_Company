@@ -3,7 +3,7 @@
 <?php
   
   	#	For database connection
-  		require_once('./common/con_localhost.php');  
+  		require_once('../common/con_localhost.php');  
 
 		$link = local_db_connect();
 
@@ -41,14 +41,14 @@
      <table>   
         <tr>
         	<td><input type="text" id="pack_qty" placeholder="Type in a quantity..."/></td>
-        	<td><input type="submit" value='Add Now!' autocomplete="off" onclick="add_quantity()" /></td>
+        	<td><input type="submit" class="submit" value='Add Now!' autocomplete="off" onclick="add_quantity()" /></td>
         </tr>
 
     </table>
     </form>
 		
 	<!-- Debug page information-->
-    <div id="debug_info">Debug Info: index_pack_size_control.php</div>
+    <div id="debug_info">Debug Info: php/index_pack_size_control.php</div>
     
 <?php
     
