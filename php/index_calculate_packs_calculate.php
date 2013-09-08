@@ -103,26 +103,25 @@
 								#	Total the number of packs and asign it to a variable
 									
 								$totalWidgets = $totalWidgets + $value_1;
-							}			
+							}
+							
+							echo '<tr id="total">';
+								echo '<td >Total Packs:</td><td>' . $totalWidgets . '</td>';
+							echo '</tr>';
+							echo '<tr>';
+					
+							#	Convert Associated Array to a string						
+								$changeToString = json_encode($resultArray);
+					
+									echo '<td><button onclick="printPrep(\'' . $qty_required . '\', \'' . urlencode($changeToString) . '\')">Print pick list</button></td>';
+							echo '</tr>';
+															
 					}	else	{
 					
     					echo'<td colspan="2" class="center_error">Widget Packs need to be added through the Stock Control tab</td>';					
 					
 					}
 					
-					echo '<tr id="total">';
-						echo '<td >Total Packs:</td><td>' . $totalWidgets . '</td>';
-					echo '</tr>';
-					echo '<tr>';
-					
-						#	Convert Associated Array to a string
-						
-							$changeToString = json_encode($resultArray);
-
-							//$changeToString = http_build_query($resultArray);
-					
-						echo '<td><button onclick="printPrep(\'' . $qty_required . '\', \'' . urlencode($changeToString) . '\')">Print pick list</button></td>';
-					echo '</tr>';
 
 			echo '</table>';		
 		

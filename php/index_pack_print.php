@@ -86,6 +86,19 @@
 	
 	} 
 
+		$user = $_ENV["LOGNAME"];
+
+		echo '<tr>';
+
+			echo '<td id="totalWidgets" colspan="2">Printed By: ' . $user . '</td>';
+		
+		echo '</tr>';
+		echo '<tr>';
+
+			echo '<td id="totalWidgets" colspan="2">Pick Date: ' . date('D, d M Y H:i:s') . '</td>';
+		
+		echo '</tr>';
+
 		echo '<tr>';
 
 			echo '<td id="totalWidgets" colspan="2">Total Number of Widgets Ordered: ' . $quantity . '</td>';

@@ -1,4 +1,4 @@
-	<h3>Pack Quantities</h3>
+	<h3>Packs</h3>
 
 <?php
   
@@ -12,8 +12,6 @@
     	            
     	$getValue = mysqli_query($link, $getValues) or die(mysqli_error());            
     	 		
-		echo '<table border="0">';
-			echo '<th colspan="3">Packs</th>';
 		
       while($numbers = mysqli_fetch_array($getValue)){
     
@@ -23,6 +21,14 @@
       }
       
 		sort($packSize);
+		
+		echo '<table border="0">';
+				
+				if (empty($packSize)){
+					echo '<th colspan="3">Add Pack Size Here &nbsp;</th>';      			
+      			}	else	{
+					echo '<th colspan="3">Pack Sizes</th>';      			
+      			}
       
       foreach($packSize as $listNumeber){
  			 	echo '<tr>';	
@@ -40,7 +46,7 @@
     <form>
      <table>   
         <tr>
-        	<td><input type="text" id="pack_qty" placeholder="Type in a quantity..."/></td>
+        	<td><input type="text" id="pack_qty" placeholder="Type in a size..."/></td>
         	<td><input type="submit" class="submit" value='Add Now!' autocomplete="off" onclick="add_quantity()" /></td>
         </tr>
 

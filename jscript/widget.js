@@ -130,7 +130,7 @@
 	function printPrep(required, result){
 	
 			var line = "php/index_pack_print.php?required=" + required + "&result=" + result;
-			newWin = open(line, "Print", "width=796", "height=1123", "copyhistory=yes", "resizable=no", "scrollbars=yes");			
+			newWin = open(line, "Print", "width=796", "height=1123", "copyhistory=yes", "resizable=no", "scrollbars=yes", "location=no");			
 			
 			$(document).ready(function(){
 				
