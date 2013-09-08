@@ -58,7 +58,7 @@
         </div>
         <div id="content_1"> 
 
-          <h3>Wally's Widget Stock Control</h3>                                  
+          <h3>Wally's Widgets</h3>                                  
           You can calculate the number of packs required to make-up the customers order. Click "Calculate Pack Quantities" to get started<br/><br/>
 <?php 
 
@@ -83,7 +83,7 @@
 		sort($packQtyList);
     		           
 
-    		echo '<h3>Current Stock Quantities</h3>';
+    		echo '<h3>Current Pack Quantities</h3>';
     		echo '<p>Packs come in the current sizes:</p>';                		             		
 		
 			foreach($packQtyList as $list){
